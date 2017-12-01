@@ -1,3 +1,7 @@
+/*
+	(c) Diego Fernández <bigomby@gmail.com>
+	Originally published on https://github.com/ESIBot/MQTT-SN-Arduino
+*/
 #include <Arduino.h>
 #include <mqttsn-messages.h>
 
