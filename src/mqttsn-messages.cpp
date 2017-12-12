@@ -180,12 +180,13 @@ void MQTTSN::dispatch() {
     }
 
     waiting_for_response = false;
+    memset(response_message, 0, MAX_BUFFER_SIZE);
 }
 
 void MQTTSN::send_message() {
     message_header* hdr = reinterpret_cast<message_header*>(message_buffer);
 
-#ifdef USE_RF12
+    #ifdef USE_RF12
     while (!rf12_canSend()) {
         rf12_recvDone();
         Sleepy::loseSomeTime(32);
