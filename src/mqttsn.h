@@ -93,7 +93,7 @@ enum message_type {
     WILLMSGRESP
 };
 
-struct message_header {
+struct __attribute__ ((packed)) message_header {
     uint8_t length;
     uint8_t type;
 };
